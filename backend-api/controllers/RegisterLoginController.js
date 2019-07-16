@@ -7,6 +7,7 @@ class RegisterLoginController {
         this.registerUser();
         this.login();
     }
+    
     init(){
         this.app.get('/', (req, res) => {
             return res.status(404)
@@ -29,7 +30,6 @@ class RegisterLoginController {
             }catch(e){
                 console.log(e.message)
             }
-          
        })
     }
 
@@ -45,10 +45,8 @@ class RegisterLoginController {
                 res.status(500)
                     .json({status: "failure" , message : e.message });
             }
-          
         })
     }
-
 }
 
 module.exports = (app) => { return new RegisterLoginController(app); };

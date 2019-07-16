@@ -1,0 +1,17 @@
+.input{
+    width: auto;
+    height: auto;
+    padding: 5px;
+
+    &-box{
+        width: 100%;
+        height: auto;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 18px;
+        padding: 10px;
+        color: black;
+        border-radius: 4px;
+        background: white;
+        border: 1px solid black;
+    }
+}
