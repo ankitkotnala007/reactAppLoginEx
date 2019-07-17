@@ -42,11 +42,11 @@ class Login extends React.Component{
                         </div>
                     </div>
                 </div>
-                <div className='panel-footer'>
-                </div>
+               
             </Panel>
         );
     }
 }
-
+// <div className='panel-footer'>
+// </div>
 export default Login;
