@@ -15,10 +15,10 @@ class RegisterLogin{
     async _login(cred){
         let db = await Database.getConnection();
         return new Promise((resolve , reject)=>{
-            db.collection('user').find({email:cred.email , password:cred.password}).toArray(function(err, result) {
+            db.collection('user').find({email:cred.username , password:cred.password}).toArray(function(err, result) {
                 if (err) reject({status:false , message: err.message });
-                if(result.length > 0) resolve({status:true , data : result});
-                else reject({status:false , message : 'Invalid Cred or Not Registered !'});
+                else if(result.length > 0) resolve({status:true , data : result});
+                else resolve({status:false , message : 'Invalid Cred or Not Registered !'});
               });
         })
     }
